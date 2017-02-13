@@ -1,0 +1,31 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  padding: 20px;
+}
+
+input[type="number"] {
+  border: 1px solid #AAAAAA;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 30px;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.good {
+  color: white;
+  background-color: green;
+}

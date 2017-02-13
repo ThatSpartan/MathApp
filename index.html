@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TEST APP</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="angular.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="test_app">
+
+    <div class="" ng-controller="choose_diff as app">
+
+      <form>
+
+        <label for="max_number">Max Number : </label>
+        <input type="number" id="max_number" ng-model="app.number_max" ng-change="app.update()" ng-init="app.number_max=5">
+
+      </form>
+
+      <ul>
+        <li ng-repeat="x in app.number_1 track by $index">{{ x }}</li>
+      </ul>
+
+      <ul>
+        <li ng-repeat="x in app.number_2 track by $index">{{ x }}</li>
+      </ul>
+
+      <ul>
+        <li ng-repeat="x in app.number_2 track by $index">
+            <label>{{ $index }}</label>
+            <input type="number" ng-model="app.user_answer[$index]" ng-change="app.user_change()" ng-class="{good: app.user_answer[$index] == app.answer[$index]}">
+        </li>
+      </ul>
+
+      <ul>
+        <li ng-repeat="x in app.answer track by $index">
+          <label>{{ $index }}</label>
+          <p>{{ x }}</p>
+        </li>
+      </ul>
+
+    </div>
+
+  </body>
+</html>
